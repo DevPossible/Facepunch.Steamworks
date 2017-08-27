@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using System.IO;
 using System.Runtime.InteropServices;
 
@@ -57,6 +58,7 @@ namespace Facepunch.Steamworks
         public ServerList ServerList { get; private set; }
         public LobbyList LobbyList { get; private set; }
         public App App { get; private set; }
+        public AppList AppList { get; private set; }
         public Achievements Achievements { get; private set; }
         public Stats Stats { get; private set; }
         public MicroTransactions MicroTransactions { get; private set; }
@@ -96,6 +98,7 @@ namespace Facepunch.Steamworks
             ServerList = new ServerList( this );
             LobbyList = new LobbyList(this);
             App = new App( this );
+            AppList = new AppList(this);
             Stats = new Stats( this );
             Achievements = new Achievements( this );
             MicroTransactions = new MicroTransactions( this );
@@ -176,6 +179,12 @@ namespace Facepunch.Steamworks
             {
                 App.Dispose();
                 App = null;
+            }
+
+            if (AppList != null)
+            {
+                AppList.Dispose();
+                AppList = null;
             }
 
             if ( Stats  != null )

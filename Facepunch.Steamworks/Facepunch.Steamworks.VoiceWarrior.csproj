@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{443D512C-3E29-40F7-806B-66BD4C5A2078}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facepunch.Steamworks</RootNamespace>
+    <AssemblyName>Facepunch.Steamworks.VoiceWarrior</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseSteamworks.cs" />
+    <Compile Include="Callbacks\Index.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Client\Achievements.cs" />
+    <Compile Include="Client\AppList.cs" />
+    <Compile Include="Client\App.cs" />
+    <Compile Include="Client\Auth.cs" />
+    <Compile Include="Client\Friends.cs" />
+    <Compile Include="Client\Image.cs" />
+    <Compile Include="Client\Leaderboard.cs" />
+    <Compile Include="Client\Lobby.cs" />
+    <Compile Include="Client\LobbyList.cs" />
+    <Compile Include="Client\LobbyList.Lobby.cs" />
+    <Compile Include="Client\MicroTransactions.cs" />
+    <Compile Include="Client\Overlay.cs" />
+    <Compile Include="Client\RemoteStorage.cs" />
+    <Compile Include="Client\RemoteStorage.File.cs" />
+    <Compile Include="Client\RemoteStorage.FileStream.cs" />
+    <Compile Include="Client\Screenshots.cs" />
+    <Compile Include="Client\ServerList.cs" />
+    <Compile Include="Client\ServerList.Request.cs" />
+    <Compile Include="Client\ServerList.Server.cs" />
+    <Compile Include="Client\ServerQuery.cs" />
+    <Compile Include="Client\Stats.cs" />
+    <Compile Include="Client\User.cs" />
+    <Compile Include="Client\Voice.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Interfaces\Inventory.cs" />
+    <Compile Include="Interfaces\Inventory.Definition.cs" />
+    <Compile Include="Interfaces\Inventory.Item.cs" />
+    <Compile Include="Interfaces\Inventory.Result.cs" />
+    <Compile Include="Interfaces\Networking.cs" />
+    <Compile Include="Interfaces\Workshop.cs" />
+    <Compile Include="Interfaces\Workshop.Editor.cs" />
+    <Compile Include="Interfaces\Workshop.Item.cs" />
+    <Compile Include="Interfaces\Workshop.Query.cs" />
+    <Compile Include="Interop\Native.cs" />
+    <Compile Include="Interop\ServerRules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Server\Auth.cs" />
+    <Compile Include="Server\Query.cs" />
+    <Compile Include="Server\ServerInit.cs" />
+    <Compile Include="Server\Stats.cs" />
+    <Compile Include="SteamNative\SteamNative.Callback.cs" />
+    <Compile Include="SteamNative\SteamNative.Constants.cs" />
+    <Compile Include="SteamNative\SteamNative.Enums.cs" />
+    <Compile Include="SteamNative\SteamNative.Helpers.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.Interface.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.Linux32.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.Linux64.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.Mac.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.Win32.cs" />
+    <Compile Include="SteamNative\SteamNative.Platform.Win64.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamApi.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamAppList.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamApps.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamClient.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamController.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamFriends.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamGameServer.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamGameServerStats.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamHTMLSurface.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamHTTP.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamInventory.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamMatchmaking.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamMatchmakingServers.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamMusic.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamMusicRemote.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamNetworking.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamRemoteStorage.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamScreenshots.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamUGC.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamUnifiedMessages.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamUser.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamUserStats.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamUtils.cs" />
+    <Compile Include="SteamNative\SteamNative.SteamVideo.cs" />
+    <Compile Include="SteamNative\SteamNative.Structs.cs" />
+    <Compile Include="SteamNative\SteamNative.Types.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
